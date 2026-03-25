@@ -117,10 +117,12 @@ sudo docker run -p 8080:8080 santiagohm20/parcial-math-service
 ```
 
 Backend 1 (18.205.150.167)
-![image](assets/Aplicación%20corriendo%20en%20Backend%2018.205.150.167.png)
+
+![image](assets/AplicacióncorriendoenBackend18.205.150.167.png)
 
 Backend 2 (54.89.180.177 )
-![image](assets/Aplicación%20corriendo%20en%20Backend%2054.89.180.177.png)
+
+![image](assets/AplicacióncorriendoenBackend54.89.180.177.png)
 
 #### Proxy
 
@@ -130,7 +132,8 @@ sudo docker run -p 8080:8080 -e SERVICE1=http://18.205.150.167:8080 -e SERVICE2=
 ```
 
 Proxy (3.86.146.183)
-![image](assets/Aplicación%20corriendo%20en%20proxy.png)
+
+![image](assets/Aplicacióncorriendoenproxy.png)
 
 Note que en el comando docker run del proxy además del contenedor del proxy, se le pasa -e SERVICE1=http://18.205.150.167:8080   y  -e SERVICE2=http://54.89.180.177:8080
 
@@ -305,17 +308,17 @@ Aseguramos los casos base y mediante recurrencia obtenemos los demás numeros de
 
 ### Prueba de app corriendo por el proxy(http://3.86.146.183:8080/lucasseq?value=5): 
 
-![img](assets/proxy%20value%205%20no%20web.png)
+![img](assets/proxyvalue5noweb.png)
 
 ### Prueba de app corriendo por el proxy mediante el formulario web(http://3.86.146.183:8080) para value = 9: s
 
-![img](assets/proxy%20web.png)
+![img](assets/proxyweb.png)
 
-![img](assets/proxy%20web%20value%209.png)
+![img](assets/proxywebvalue9.png)
 
 Output de consola:
 
-![img](assets/Output%20de%20consola%20sobre%20el%20proxy%20para%20value%20igual%20a%209.png)
+![img](assets/OutputConsola.png)
 
 
 
