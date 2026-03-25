@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Service</title>
+</head>
+<body>
+
+<h2>Calculadora de secuencia de lucas</h2>
+
+<input id="value" type="number" placeholder="Ingresa n">
+<button onclick="calculate()">Calcular Secuencia de Lucas</button>
+
+<p id="result"></p>
+
+<script>
+    function calculate() {
+
+        let value = document.getElementById("value").value;
+
+        fetch("/lucasseq?value=" + value)
+                .then(response => response.json())
+            .then(data => {
+                document.getElementById("result").innerHTML = JSON.stringify(data);
+            });
+
+    }
+</script>
+
+</body>
+</html>
