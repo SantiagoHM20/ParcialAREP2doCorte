@@ -1,36 +1,35 @@
 package co.edu.eci.ParcialProxy.service;
 
+import co.edu.eci.ParcialProxy.dto.LucasResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class HttpService {
 
-    private String service1 = System.getenv("SERVICE1");
-    private String service2 = System.getenv("SERVICE2");
+    private String[] services = {
+            System.getenv("SERVICE1"),
+            System.getenv("SERVICE2")
+    };
 
     private RestTemplate restTemplate = new RestTemplate();
+    private int counter = 0;
 
-    public List<Long> getResult(String value) {
+    public synchronized List<Long> getResult(String value) {
+        String serviceUrl = services[counter];
+        counter = (counter + 1) % services.length;
 
-        try {
-            Long[] result = restTemplate.getForObject(
-                    service1 + "/pell?value=" + value,
-                    Long[].class
-            );
-            return Arrays.asList(result);
+        String url = serviceUrl + "/lucasseq?value=" + value;
+        LucasResponse response = restTemplate.getForObject(url, LucasResponse.class);
 
-        } catch (Exception e) {
-
-            Long[] result = restTemplate.getForObject(
-                    service2 + "/pell?value=" + value,
-                    Long[].class
-            );
-            return Arrays.asList(result);
-        }
+        return Arrays.stream(response.getOutput().split(","))
+                .map(String::trim)
+                .map(Long::parseLong)
+                .collect(Collectors.toList());
     }
 }
 
