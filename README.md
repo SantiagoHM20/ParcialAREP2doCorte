@@ -8,7 +8,7 @@ Sistema distribuido en Spring Boot compuesto por dos aplicaciones: un servicio m
 
 ## Video de prueba
 
-https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/santiago_hurtado-m_mail_escuelaing_edu_co/IQCJRb0RcilBQrD8z67L3ZYOAVGzRwmyHJzfw52gFuOhVIA?e=LN1Ywt
+[video](https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/santiago_hurtado-m_mail_escuelaing_edu_co/IQCJRb0RcilBQrD8z67L3ZYOAVGzRwmyHJzfw52gFuOhVIA?e=LN1Ywt)
 
 ### Prerequisitos
 
