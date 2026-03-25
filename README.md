@@ -304,7 +304,7 @@ Aseguramos los casos base y mediante recurrencia obtenemos los demás numeros de
 
 ![img](assets/proxy%20value%205%20no%20web.png)
 
-### Prueba de app corriendo por el proxy mediante el formulario web(http://3.86.146.183:8080) para value = 9: 
+### Prueba de app corriendo por el proxy mediante el formulario web(http://3.86.146.183:8080) para value = 9: s
 
 ![img](assets/proxy%20web.png)
 
