@@ -6,6 +6,9 @@ Secuencia de lucas
 Sistema distribuido en Spring Boot compuesto por dos aplicaciones: un servicio matematico que calcula la sucesion de Lucas y un proxy que reenvia las solicitudes al servicio principal o al de respaldo en caso de fallo.
 
 
+## Video de prueba
+
+https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/santiago_hurtado-m_mail_escuelaing_edu_co/IQCJRb0RcilBQrD8z67L3ZYOAVGzRwmyHJzfw52gFuOhVIA?e=LN1Ywt
 
 ### Prerequisitos
 
@@ -304,7 +307,7 @@ Aseguramos los casos base y mediante recurrencia obtenemos los demás numeros de
 
 ![img](assets/proxy%20value%205%20no%20web.png)
 
-### Prueba de app corriendo por el proxy mediante el formulario web(http://3.86.146.183:8080) para value = 9: 
+### Prueba de app corriendo por el proxy mediante el formulario web(http://3.86.146.183:8080) para value = 9: s
 
 ![img](assets/proxy%20web.png)
 
